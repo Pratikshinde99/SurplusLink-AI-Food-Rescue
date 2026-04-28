@@ -19,9 +19,8 @@ services:
         sync: false
 
   # Frontend Static Site
-  - type: web
+  - type: static
     name: surpluslink-frontend
-    env: static
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishDir: dist
