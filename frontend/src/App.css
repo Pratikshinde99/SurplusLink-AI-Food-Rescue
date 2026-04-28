@@ -1,0 +1,27 @@
+/* Cleaned up App.css - keeping only essential utility overrides if any */
+/* The main design is now in index.css and inline styles for maximum control */
+
+.card-hover-effect {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  border-color: rgba(255,255,255,0.1) !important;
+}
+
+input::placeholder {
+  color: var(--text-dim);
+  opacity: 0.5;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
