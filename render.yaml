@@ -18,12 +18,13 @@ services:
       - key: SUPABASE_SERVICE_ROLE_KEY
         sync: false
 
-# Frontend Static Site
-staticSites:
-  - name: surpluslink-frontend
+  # Frontend Static Site
+  - type: web
+    name: surpluslink-frontend
+    env: static
     rootDir: frontend
     buildCommand: npm install && npm run build
-    publishPath: dist
+    staticPublishPath: dist
     envVars:
       - key: VITE_API_URL
         fromService:
